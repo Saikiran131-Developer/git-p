@@ -7,6 +7,5 @@ king3
 king4
 king5
 king6
-
-
+ updating txt by nik
 
