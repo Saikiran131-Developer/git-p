@@ -15,6 +15,7 @@
         margin: 0;
     padding: 0;
     overflow-x: hidden;
+    
       }
       /* main container for entire nav bar */
       .navcontainer {
@@ -81,7 +82,111 @@ font-family: sans-serif;
         border-radius: 5px;
         font-size: 14px;
       }
-      @media screen and (min-width: 267px) and (max-width: 700px) {
+      .menucontainer{
+        width: 80%;
+        height: 100vh;
+        
+       
+    margin-left: auto;
+    margin-right: auto;
+    
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 346px 346px 346px;
+    grid-template-areas:
+     'a b c'
+     'd e f';
+
+    }
+
+    .item :nth-child(1){
+        height: 55%;
+        width: 50%;
+        border-radius: 50%;
+        margin-top: 10px;
+        
+    }
+    .item :nth-child(2){
+        font-weight: bold;
+        margin: 10px;
+    }
+    .item :nth-child(3){
+       
+        margin: 10px;
+    }
+    .item :nth-child(4){
+        font-weight: bold;
+       margin: 10px;
+       color: orangered;
+   }
+    
+      .item{
+        height: 300px;
+        text-align: center;
+    
+     
+      }
+      .burger{ 
+        grid-area: a;
+        border: 2px solid whitesmoke;
+        
+
+      }
+      .pizza{
+grid-area: b;
+border: 2px solid whitesmoke;
+      }
+      .tacobell{
+grid-area: c;
+border: 2px solid whitesmoke;
+      }
+.kfc{
+   
+    grid-area: d;
+border: 2px solid whitesmoke;
+}
+.frenchfries{
+   
+   grid-area: e;
+border: 2px solid whitesmoke;
+}
+
+.italianpizza{
+   
+   grid-area: f;
+border: 2px solid whitesmoke;
+}
+
+.item:hover img {
+    border-radius: 0;
+transform: scale(1.5) rotate(180deg);
+}
+
+.item>img{
+    transition: 1.1s ease;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media screen and (min-width: 267px) and (max-width: 780px) {
   .navsection {
     flex-direction: column;
     align-items: center; /* Optional: Centers the nav items horizontally */
@@ -104,8 +209,20 @@ margin-left: 70px;
   }
 
 
-}
+  .menucontainer{
 
+    grid-template-areas:
+     'a b'
+     'c d'
+     'e f';
+
+    }
+
+}
+h3{
+    text-align: center;
+    padding: 10px;
+}
 
 
 
@@ -134,7 +251,37 @@ margin-left: 70px;
     <p>Your favourite place to order delicious food online.</p>
     <p>See Our Menu</p>
 </div>
+
+    </div>
+    <h3>Menu</h3>
+   <div class="menucontainer">
+    <div class="item burger"><img src="https://b.zmtcdn.com/data/pictures/8/21229838/3e533d4b5bcf3950d9b269c2a7b17196_o2_featured_v2.jpg?output-format=webp" alt="burger">
+    <p>Deluxe Burger</p>
+    <p>Juicy beef patty with cheese, lettuce, and tomato.</p>
+    <p>$2.99</p></div>
+    <div class="item pizza"><img src="https://b.zmtcdn.com/data/dish_photos/454/47b6bb31338b7c06c42370b408db1454.png" alt="pizza">
+    <p>Cheese Pizza</p>
+    <p>Classic cheese pizza with a crispy crust.</p>
+    <p>$4.99</p></div>
+    <div class="item tacobell"><img src="https://b.zmtcdn.com/data/dish_photos/65b/fad883661133d65e6a613fbf468d465b.jpg?output-format=webp" alt="tacobell">
+    <p>Taco Bell</p>
+    <p>Flavorful, customizable Mexican fast food.</p>
+    <p>$3.99</p></div>
+    <div class="item kfc"><img src="https://b.zmtcdn.com/data/pictures/chains/5/90195/f79f0e8f93bf34a07bbe3509ac89190d.jpg?fit=around%7C771.75:416.25&crop=771.75:416.25;*,*" alt="kfc">
+    <p>KFC</p>
+    <p>Flavorful, customizable KFC food</p>
+    <p>$4.49</p></div>
+    <div class="item frenchfries"><img src="https://b.zmtcdn.com/data/dish_photos/0e4/8cd174da07231b8a4c0a764d001a60e4.jpeg" alt="French Fries" alt="kfc">
+        <p>French Fries</p>
+        <p>Little hot and Spicy food</p>
+        <p>$2.49</p></div>
+    <div class="item italianpizza">
+        <img src="https://b.zmtcdn.com/data/dish_photos/a80/096e01605794f3e84d5e88a3f61b5a80.jpeg" alt="kfc">
+    <p>Italian's Pizza</p>
+    <p>Flavorful, customizable Italian food</p>
+    <p>$3.99</p>
     </div>
    
+ </div>
   </body>
 </html>
